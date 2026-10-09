@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="EVJ Painting — licensed C-33 painting contractor in Sacramento. Residential and commercial, interior and exterior, cabinets, stucco, fences and decks. Over 20 years of experience. Free estimates, senior and veteran discounts. CSLB #1134654, licensed, bonded and insured. Call (916) 519-5013.">
+<title>EVJ Painting — Sacramento</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --page: #FBFAF8;
+    --page-deep: #F1EEE9;
+    --slate: #203040;
+    --slate-deep: #141F2B;
+    --terra: #C4562F;
+    --terra-soft: #DB6C43;
+    --sage: #4C7A5E;
+    --gold: #E3A552;
+    --ink: #1E242B;
+    --ink-soft: #5E6873;
+    --line: #E0DAD1;
+    --card: #FFFFFF;
+    --img-bg: #E7E2D9;
+    --on-dark: #F6F3EE;
+    --on-accent: #FFFFFF;
+    --display: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
+    --body: "Figtree", "Segoe UI", Arial, sans-serif;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --page: #15171A;
+      --page-deep: #0F1113;
+      --slate: #9FB4C8;
+      --slate-deep: #C2D4E4;
+      --terra: #E07A4E;
+      --terra-soft: #C4562F;
+      --sage: #78AC8B;
+      --gold: #E3A552;
+      --ink: #E8ECF0;
+      --ink-soft: #9AA4AF;
+      --line: #282D33;
+      --card: #1C1F23;
+      --img-bg: #24282D;
+      --on-dark: #0F1113;
+      --on-accent: #15171A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --page: #15171A;
+    --page-deep: #0F1113;
+    --slate: #9FB4C8;
+    --slate-deep: #C2D4E4;
+    --terra: #E07A4E;
+    --terra-soft: #C4562F;
+    --sage: #78AC8B;
+    --gold: #E3A552;
+    --ink: #E8ECF0;
+    --ink-soft: #9AA4AF;
+    --line: #282D33;
+    --card: #1C1F23;
+    --img-bg: #24282D;
+    --on-dark: #0F1113;
+    --on-accent: #15171A;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+  body {
+    margin: 0; background: var(--page); color: var(--ink);
+    font-family: var(--body); font-size: 1.0625rem; line-height: 1.66;
+  }
+  a { color: var(--sage); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--terra); outline-offset: 3px; border-radius: 2px; }
+  img, svg { max-width: 100%; display: block; }
+
+  .wrap { max-width: 70rem; margin: 0 auto; padding: 0 1.25rem; }
+  .eyebrow {
+    font-weight: 700; font-size: 0.75rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--terra); margin: 0 0 0.8rem;
+  }
+  h1, h2, h3 { font-family: var(--display); font-weight: 700; color: var(--slate-deep); text-wrap: balance; margin: 0; letter-spacing: -0.03em; }
+  h2 { font-size: clamp(1.95rem, 4.7vw, 2.6rem); line-height: 1.08; }
+  h3 { font-size: 1.15rem; }
+  p { margin: 0; }
+  section { padding: 4.4rem 0; scroll-margin-top: 4.5rem; }
+  .section-intro { max-width: 44em; margin-top: 0.95rem; color: var(--ink-soft); }
+
+  /* Header */
+  .site-head {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--page) 92%, transparent);
+    backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
+  }
+  header.site { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.66rem 0; }
+  .brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+  .brand .txt { font-family: var(--display); font-weight: 800; font-size: 1.3rem; line-height: 1; color: var(--slate-deep); letter-spacing: -0.04em; }
+  .brand .txt small { display: block; font-family: var(--body); font-size: 0.6rem; font-weight: 600; letter-spacing: 0.21em; color: var(--terra); margin-top: 4px; text-transform: uppercase; }
+  nav.top { display: none; gap: 1.15rem; }
+  nav.top a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: 0.92rem; }
+  nav.top a:hover { color: var(--terra); }
+  .call-btn {
+    display: inline-block; background: var(--terra); color: var(--on-accent);
+    text-decoration: none; font-weight: 700; font-size: 0.91rem;
+    padding: 0.56rem 1.15rem; border-radius: 0.4rem; white-space: nowrap;
+  }
+  .call-btn:hover { background: var(--slate); }
+  @media (min-width: 1040px) { nav.top { display: flex; } }
+  @media (max-width: 420px) { .brand .txt { font-size: 1.08rem; } }
+
+  /* Hero */
+  .hero { padding: 3.5rem 0 3.9rem; position: relative; overflow: hidden; }
+  .hero::before {
+    content: ""; position: absolute; inset: -30% -14% auto 44%; height: 92%;
+    background: radial-gradient(ellipse at center, color-mix(in srgb, var(--gold) 24%, transparent), transparent 66%);
+    pointer-events: none;
+  }
+  .hero-grid { display: grid; gap: 2.4rem; align-items: center; position: relative; }
+  @media (min-width: 880px) { .hero-grid { grid-template-columns: 1.04fr 1fr; gap: 3rem; } }
+  .pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.15rem; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: var(--card); border: 1px solid var(--line); border-radius: 999px;
+    padding: 0.32rem 0.92rem; font-weight: 600; font-size: 0.83rem; color: var(--ink-soft);
+  }
+  .pill.star { color: var(--gold); border-color: var(--gold); }
+  .hero h1 { font-size: clamp(2.15rem, 5.6vw, 3.15rem); line-height: 1.04; }
+  .hero h1 .t { color: var(--terra); }
+  .hero .lede { margin-top: 1.15rem; font-size: 1.13rem; max-width: 33em; color: var(--ink-soft); }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.8rem; }
+  .btn {
+    display: inline-block; text-decoration: none; font-family: var(--display);
+    font-weight: 700; font-size: 0.98rem; padding: 0.84rem 1.65rem; border-radius: 0.4rem;
+  }
+  .btn-solid { background: var(--terra); color: var(--on-accent); }
+  .btn-solid:hover { background: var(--terra-soft); }
+  .btn-ghost { border: 2px solid var(--slate); color: var(--slate); }
+  .btn-ghost:hover { border-color: var(--terra); color: var(--terra); }
+  .hero-note { margin-top: 1.25rem; font-size: 0.92rem; color: var(--ink-soft); }
+  .hero-photo { margin: 0; border-radius: 0.75rem; overflow: hidden; border: 1px solid var(--line); background: var(--img-bg); }
+  .hero-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+
+  /* Strip */
+  .strip { background: var(--slate-deep); padding: 1.95rem 0; }
+  .strip-grid { display: grid; gap: 1.35rem; grid-template-columns: repeat(2, 1fr); text-align: center; }
+  @media (min-width: 780px) { .strip-grid { grid-template-columns: repeat(4, 1fr); } }
+  .strip-grid .n { font-family: var(--display); font-weight: 800; font-size: clamp(1.2rem, 2.9vw, 1.62rem); color: var(--gold); line-height: 1.12; }
+  .strip-grid .l { margin-top: 0.3rem; font-size: 0.77rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--on-dark); opacity: 0.84; }
+  :root[data-theme="dark"] .strip { background: var(--card); }
+  :root[data-theme="dark"] .strip-grid .l { color: var(--ink); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .strip { background: var(--card); }
+    :root:not([data-theme="light"]) .strip-grid .l { color: var(--ink); }
+  }
+
+  /* Services */
+  .svc-cols { display: grid; gap: 1.4rem; margin-top: 2.4rem; }
+  @media (min-width: 860px) { .svc-cols { grid-template-columns: repeat(2, 1fr); gap: 1.6rem; } }
+  .svc-col { background: var(--card); border: 1px solid var(--line); border-radius: 0.75rem; padding: 1.8rem 1.6rem; }
+  .svc-col.res { border-top: 4px solid var(--terra); }
+  .svc-col.com { border-top: 4px solid var(--sage); }
+  .svc-col h3 { font-size: 1.32rem; }
+  .svc-col .sub { margin-top: 0.3rem; font-size: 0.9rem; color: var(--ink-soft); }
+  .svc-col ul { margin: 1.1rem 0 0; padding: 0; list-style: none; display: grid; gap: 0.6rem; }
+  .svc-col li { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.95rem; }
+  .svc-col li svg { flex: none; margin-top: 4px; }
+  .svc-col.res li svg { color: var(--terra); }
+  .svc-col.com li svg { color: var(--sage); }
+
+  /* Extras */
+  .extras { display: grid; gap: 1.1rem; margin-top: 1.6rem; }
+  @media (min-width: 700px) { .extras { grid-template-columns: repeat(3, 1fr); } }
+  .extra { background: var(--card); border: 1px solid var(--line); border-radius: 0.6rem; padding: 1.35rem 1.3rem; }
+  .extra .ico { color: var(--terra); margin-bottom: 0.6rem; }
+  .extra h3 { font-size: 1.04rem; }
+  .extra p { margin-top: 0.35rem; font-size: 0.92rem; color: var(--ink-soft); }
+
+  /* Discount band */
+  .disc-band {
+    margin-top: 2rem; background: var(--gold); border-radius: 0.7rem;
+    padding: 1.7rem 1.8rem; display: grid; gap: 1rem; align-items: center;
+  }
+  @media (min-width: 760px) { .disc-band { grid-template-columns: 1fr auto; } }
+  .disc-band h3 { color: #2A1E0C; font-size: 1.25rem; }
+  .disc-band p { margin-top: 0.35rem; font-size: 0.96rem; color: #4A381C; }
+  .disc-band .btn-solid { background: #2A1E0C; color: #FFFFFF; }
+  .disc-band .btn-solid:hover { background: var(--terra); }
+
+  /* Reviews */
+  .reviews { background: var(--page-deep); }
+  .rev-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.9rem; margin-top: 0.9rem; }
+  .rev-score { font-family: var(--display); font-weight: 800; font-size: 2.6rem; color: var(--slate-deep); line-height: 1; }
+  .rev-stars { color: var(--gold); letter-spacing: 0.15em; font-size: 1.15rem; }
+  .rev-count { font-size: 0.95rem; color: var(--ink-soft); }
+  .rev-grid { display: grid; gap: 1.15rem; margin-top: 2.1rem; }
+  @media (min-width: 880px) { .rev-grid { grid-template-columns: repeat(3, 1fr); } }
+  .rev {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 0.7rem; padding: 1.5rem 1.4rem; display: flex; flex-direction: column;
+  }
+  .rev .s { color: var(--gold); letter-spacing: 0.14em; font-size: 0.95rem; }
+  .rev blockquote { margin: 0.7rem 0 0; font-size: 0.96rem; color: var(--ink); }
+  .rev .who { margin-top: auto; padding-top: 1rem; font-size: 0.87rem; color: var(--ink-soft); }
+  .rev .who strong { color: var(--ink); }
+
+  /* Work */
+  .work-grid { display: grid; gap: 1rem; margin-top: 2.3rem; grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 820px) { .work-grid { grid-template-columns: repeat(3, 1fr); } }
+  .shot { margin: 0; border: 1px solid var(--line); border-radius: 0.65rem; overflow: hidden; background: var(--card); }
+  .shot img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--img-bg); }
+  .shot figcaption { padding: 0.72rem 0.95rem; font-size: 0.85rem; color: var(--ink-soft); font-weight: 500; }
+  .shot.ours figcaption::before { content: "Our work  B7 "; color: var(--terra); font-weight: 700; }
+  .fine { margin-top: 1.3rem; font-size: 0.85rem; color: var(--ink-soft); }
+
+  /* Areas */
+  .areas { background: var(--page-deep); }
+  .area-grid { display: grid; gap: 0.72rem; margin-top: 2.1rem; grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 700px) { .area-grid { grid-template-columns: repeat(4, 1fr); } }
+  .area {
+    background: var(--card); border: 1px solid var(--line); border-radius: 0.45rem;
+    padding: 0.9rem 0.75rem; text-align: center; font-weight: 600; font-size: 0.93rem; color: var(--slate-deep);
+  }
+
+  /* Licensed */
+  .lic-wrap { display: grid; gap: 1.8rem; margin-top: 2.4rem; align-items: center; }
+  @media (min-width: 820px) { .lic-wrap { grid-template-columns: minmax(0, 300px) 1fr; gap: 2.7rem; } }
+  .lic-card { background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--terra); border-radius: 0.75rem; padding: 2rem 1.7rem; text-align: center; }
+  .lic-card .num { font-family: var(--display); font-weight: 800; font-size: 2rem; color: var(--terra); line-height: 1; font-variant-numeric: tabular-nums; }
+  .lic-card .lbl { margin-top: 0.45rem; font-weight: 600; font-size: 0.93rem; }
+  .lic-card .sub { margin-top: 0.4rem; font-size: 0.85rem; color: var(--ink-soft); }
+  .lic-card a { display: inline-block; margin-top: 0.85rem; font-size: 0.88rem; font-weight: 600; }
+  .checks { margin: 1.2rem 0 0; padding: 0; list-style: none; display: grid; gap: 0.66rem; }
+  .checks li { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.97rem; }
+  .checks svg { flex: none; color: var(--terra); margin-top: 3px; }
+
+  /* Contact */
+  .contact-band { background: var(--slate-deep); text-align: center; }
+  .contact-band .eyebrow { color: var(--gold); }
+  .contact-band h2 { color: var(--on-dark); }
+  .contact-band .section-intro { color: var(--on-dark); opacity: 0.87; margin-inline: auto; }
+  .contact-band .hero-ctas { justify-content: center; }
+  .contact-band .btn-solid { background: var(--terra); color: #FFFFFF; }
+  .contact-band .btn-solid:hover { background: var(--gold); color: #2A1E0C; }
+  .contact-band .btn-ghost { border-color: var(--on-dark); color: var(--on-dark); }
+  .contact-band .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+  .contact-band .fine { margin-top: 1.45rem; color: var(--on-dark); opacity: 0.84; font-size: 0.92rem; }
+  :root[data-theme="dark"] .contact-band { background: var(--page-deep); }
+  :root[data-theme="dark"] .contact-band h2,
+  :root[data-theme="dark"] .contact-band .section-intro,
+  :root[data-theme="dark"] .contact-band .fine { color: var(--ink); }
+  :root[data-theme="dark"] .contact-band .btn-ghost { border-color: var(--ink); color: var(--ink); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .contact-band { background: var(--page-deep); }
+    :root:not([data-theme="light"]) .contact-band h2,
+    :root:not([data-theme="light"]) .contact-band .section-intro,
+    :root:not([data-theme="light"]) .contact-band .fine { color: var(--ink); }
+    :root:not([data-theme="light"]) .contact-band .btn-ghost { border-color: var(--ink); color: var(--ink); }
+  }
+
+  /* Footer */
+  footer.site {
+    background: var(--page-deep); border-top: 1px solid var(--line);
+    color: var(--ink-soft); padding: 2.5rem 0; text-align: center; font-size: 0.9rem;
+  }
+  footer.site .fname { font-family: var(--display); font-weight: 800; font-size: 1.32rem; color: var(--slate-deep); letter-spacing: -0.04em; }
+  footer.site p { margin-top: 0.3rem; }
+  footer.site a { color: inherit; }
+  footer.site .fineprint { font-size: 0.78rem; max-width: 52em; margin: 0.9rem auto 0; }
+</style>
+</head>
+<body>
+
+<div class="site-head">
+  <div class="wrap">
+    <header class="site">
+      <a class="brand" href="#top" aria-label="EVJ Painting home">
+        <svg width="34" height="34" viewBox="0 0 36 36" aria-hidden="true">
+          <rect x="2" y="2" width="32" height="32" rx="7" fill="#203040"/>
+          <path d="M10 24.5 L18 9.5 L26 24.5 Z" fill="#C4562F"/>
+          <rect x="10" y="26" width="16" height="2.6" rx="1.3" fill="#E3A552"/>
+        </svg>
+        <span class="txt">EVJ<small>Painting</small></span>
+      </a>
+      <nav class="top" aria-label="Sections">
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#work">Our work</a>
+        <a href="#areas">Areas</a>
+        <a href="#licensed">Licensed</a>
+        <a href="#contact">Free estimate</a>
+      </nav>
+      <a class="call-btn" href="tel:+19165195013">Call (916) 519-5013</a>
+    </header>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ============ 1. HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="pills">
+          <span class="pill star">&#9733; 5.0 on Google</span>
+          <span class="pill">Free estimates</span>
+          <span class="pill">Licensed &amp; insured</span>
+        </div>
+        <h1>Over 20 years of <span class="t">doing it properly.</span></h1>
+        <p class="lede">EVJ Painting is a licensed painting contractor serving Sacramento, the Bay Area and surrounding communities — residential and commercial, interior and exterior, built on word of mouth and repeat clients.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-solid" href="tel:+19165195013">Get a free estimate</a>
+          <a class="btn btn-ghost" href="#work">See our work</a>
+        </div>
+        <p class="hero-note">CSLB #1134654 &middot; licensed, bonded &amp; insured &middot; senior &amp; veteran discounts</p>
+      </div>
+      <figure class="hero-photo">
+        <img src="img/exterior-job.jpg" alt="EVJ Painting crew painting the exterior of a two-storey home">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 2. STRIP ============ -->
+  <div class="strip">
+    <div class="wrap strip-grid">
+      <div><div class="n">20+ years</div><div class="l">Of experience</div></div>
+      <div><div class="n">&#9733; 5.0</div><div class="l">Google rating</div></div>
+      <div><div class="n">Free</div><div class="l">Estimates</div></div>
+      <div><div class="n">#1134654</div><div class="l">CSLB licensed</div></div>
+    </div>
+  </div>
+
+  <!-- ============ 3. SERVICES ============ -->
+  <section id="services">
+    <div class="wrap">
+      <p class="eyebrow">What we do</p>
+      <h2>Residential and commercial painting.</h2>
+      <p class="section-intro">From a single room to an apartment complex — the same preparation, the same materials, the same care.</p>
+
+      <div class="svc-cols">
+        <div class="svc-col res">
+          <h3>Residential</h3>
+          <p class="sub">Homes, inside and out</p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Interior painting — walls, ceilings, trim and doors</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Exterior painting — stucco, siding, brick and wood</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Cabinet refinishing and painting</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Fence and deck staining or painting</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Colour consultation</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Surface preparation and drywall repair</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Eco-friendly paint options</span></li>
+          </ul>
+        </div>
+        <div class="svc-col com">
+          <h3>Commercial</h3>
+          <p class="sub">Scheduled around your business</p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Office buildings and complexes</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Retail stores and shopping centres</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Restaurants and hospitality spaces</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Warehouses and industrial facilities</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>HOA and apartment complexes</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Surface prep, power washing and repairs</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Low-VOC and eco-friendly paint options</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="extras">
+        <div class="extra">
+          <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h7"/></svg></div>
+          <h3>Preparation first</h3>
+          <p>Filling, sanding, power washing and repairs. Paint over a bad surface and you see it for years.</p>
+        </div>
+        <div class="extra">
+          <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Clean &amp; respectful</h3>
+          <p>Floors protected, furniture covered, site left tidy. Timely service, start to finish.</p>
+        </div>
+        <div class="extra">
+          <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.4 5.6 6 .5-4.6 4 1.4 5.9L12 15.9 6.8 19l1.4-5.9-4.6-4 6-.5z"/></svg></div>
+          <h3>Premium materials</h3>
+          <p>Quality paints and materials, at rates that stay affordable.</p>
+        </div>
+      </div>
+
+      <div class="disc-band">
+        <div>
+          <h3>Senior &amp; veteran discounts</h3>
+          <p>Free, no-obligation estimates — and a discount for seniors and veterans on every job.</p>
+        </div>
+        <div><a class="btn btn-solid" href="tel:+19165195013">Call (916) 519-5013</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. REVIEWS ============ -->
+  <section id="reviews" class="reviews">
+    <div class="wrap">
+      <p class="eyebrow">What customers say</p>
+      <h2>Five stars, in their words.</h2>
+      <div class="rev-head">
+        <span class="rev-score">5.0</span>
+        <span class="rev-stars" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="rev-count">from 3 reviews on Google</span>
+      </div>
+      <div class="rev-grid">
+        <div class="rev">
+          <div class="s" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>&ldquo;I have used E.V.J painting service for a couple of years and have always been so happy with the end result. He is so easy to work with from start to finish and wants to leave the project with the customer satisfied and happy. Great person and great painter!&rdquo;</blockquote>
+          <p class="who"><strong>Diane Bento</strong> &middot; Google review</p>
+        </div>
+        <div class="rev">
+          <div class="s" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>&ldquo;I contracted EVJ Painting for exterior painting on my house in the valley and they went above and beyond by helping me also do inside the front patio with a very fair price. I really liked how they work and also very neat — I highly recommend them!&rdquo;</blockquote>
+          <p class="who"><strong>Erick</strong> &middot; Google review</p>
+        </div>
+        <div class="rev">
+          <div class="s" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>&ldquo;I recommended EVJ Painting to a consultant for a new commercial building in Midtown Sacramento. They were very happy with the service and have used them on many other projects since then. I highly recommend EVJ Painting.&rdquo;</blockquote>
+          <p class="who"><strong>Steve Pasion</strong> &middot; Google review</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. WORK ============ -->
+  <section id="work">
+    <div class="wrap">
+      <p class="eyebrow">The work</p>
+      <h2>Houses, storefronts and everything between.</h2>
+      <div class="work-grid">
+        <figure class="shot ours">
+          <img src="img/exterior-job.jpg" alt="Two-storey stucco home being repainted, ladder against the wall" loading="lazy">
+          <figcaption>Exterior repaint, Sacramento</figcaption>
+        </figure>
+        <figure class="shot ours">
+          <img src="img/crew-job.jpg" alt="EVJ Painting crew working on a commercial canopy" loading="lazy">
+          <figcaption>Commercial site</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="img/interior-paint.jpg" alt="Interior wall being rolled" loading="lazy">
+          <figcaption>Interior painting</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="img/cabinets.jpg" alt="Kitchen with painted cabinetry" loading="lazy">
+          <figcaption>Cabinet refinishing</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="img/livingroom.jpg" alt="Living room after painting" loading="lazy">
+          <figcaption>Living spaces</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="img/commercial.jpg" alt="Commercial interior space" loading="lazy">
+          <figcaption>Offices &amp; retail</figcaption>
+        </figure>
+      </div>
+      <p class="fine">The first two photographs are our own jobs. The rest illustrate the type of finish offered &mdash; more of our own work is being added.</p>
+    </div>
+  </section>
+
+  <!-- ============ 6. AREAS ============ -->
+  <section id="areas" class="areas">
+    <div class="wrap">
+      <p class="eyebrow">Where we work</p>
+      <h2>Sacramento, the Bay Area and beyond.</h2>
+      <p class="section-intro">Locally owned and operated, serving Sacramento and the surrounding communities.</p>
+      <div class="area-grid">
+        <div class="area">Sacramento</div>
+        <div class="area">Arden-Arcade</div>
+        <div class="area">Natomas</div>
+        <div class="area">Elk Grove</div>
+        <div class="area">Roseville</div>
+        <div class="area">Citrus Heights</div>
+        <div class="area">Davis</div>
+        <div class="area">Bay Area</div>
+      </div>
+      <p class="fine">Somewhere else? Call and ask &mdash; we travel for the right job.</p>
+    </div>
+  </section>
+
+  <!-- ============ 7. LICENSED ============ -->
+  <section id="licensed">
+    <div class="wrap">
+      <p class="eyebrow">Licensed, bonded &amp; insured</p>
+      <h2>Check the licence before you let anyone in your home.</h2>
+      <div class="lic-wrap">
+        <div class="lic-card">
+          <div class="num">1134654</div>
+          <div class="lbl">CSLB licence number</div>
+          <div class="sub">C-33 &mdash; Painting and Decorating<br>Active &middot; $25,000 bond</div>
+          <a href="https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx" rel="noopener">Verify at cslb.ca.gov &rarr;</a>
+        </div>
+        <div>
+          <p>California requires a contractor's licence for any painting job over $500 in labour and materials. Plenty of people painting Sacramento homes do not hold one — and if an uninsured painter is hurt on your property, that can become your problem.</p>
+          <ul class="checks">
+            <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Active C-33 licence</strong> — the classification specific to painting and decorating.</span></li>
+            <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>$25,000 contractor's bond</strong> with American Contractors Indemnity, on file with the state.</span></li>
+            <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Workers' compensation insurance</strong> carried for our crew — many small outfits carry none.</span></li>
+            <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Free, no-obligation estimates</strong> — you know the price before any work begins.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. CONTACT ============ -->
+  <section id="contact" class="contact-band">
+    <div class="wrap">
+      <p class="eyebrow">Free estimates</p>
+      <h2>Ready to elevate your space?</h2>
+      <p class="section-intro">Tell us about the project — a room, a house, or a whole building — and we will come and give you a price.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="tel:+19165195013">Call (916) 519-5013</a>
+        <a class="btn btn-ghost" href="https://maps.google.com/?cid=18203101397758928249" rel="noopener">Find us on Google</a>
+      </div>
+      <p class="fine">Sacramento, CA &middot; senior &amp; veteran discounts &middot; CSLB #1134654</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p class="fname">EVJ Painting</p>
+    <p>Licensed C-33 painting contractor &middot; Sacramento, California</p>
+    <p><a href="tel:+19165195013">(916) 519-5013</a></p>
+    <p>California CSLB licence #1134654 &middot; licensed, bonded &amp; insured &middot; free estimates</p>
+    <p class="fineprint">Licence number, classification, bond and workers' compensation status are public record with the California Contractors State License Board and can be verified at cslb.ca.gov. Reviews shown are quoted from our Google listing. Some photographs illustrate the type of finish offered rather than specific completed jobs.</p>
+  </div>
+</footer>
+
+<script src="https://smb.airoxlab.com/api/t/script" defer></script>
+</body>
+</html>
